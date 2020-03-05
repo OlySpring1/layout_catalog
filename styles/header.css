@@ -21,7 +21,9 @@
   .nav__link {
     color: #000;
     margin-left: 20px;
-    padding: 23px 0; }
+    padding: 23px 0;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s; }
   .nav__link:hover {
     color: #00acdc; }
 

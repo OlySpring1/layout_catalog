@@ -21,7 +21,9 @@
   .nav__link {
     color: #000;
     margin-left: 20px;
-    padding: 23px 0; }
+    padding: 23px 0;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s; }
   .nav__link:hover {
     color: #00acdc; }
 
@@ -101,10 +103,20 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 5px; }
-  .card .card__img {
+  .card__img {
     width: 160px;
     height: 134px;
-    margin: 16px auto 45px; }
+    margin: 5px auto 20px;
+    padding: 25px 0;
+    border: 3px solid transparent;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s; }
+  .card__img:hover {
+    border-color: #f3f3f3;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
   .card__text {
     font-size: 12px;
     font-weight: 500;
@@ -148,7 +160,9 @@
     line-height: 40px;
     text-align: center;
     text-transform: uppercase;
-    color: #fff; }
+    color: #fff;
+    -webkit-transition: background 0.3s, color 0.3s, border 0.3s;
+    transition: background 0.3s, color 0.3s, border 0.3s; }
   .card__button:hover {
     background: #fff;
     border: 1px solid #00acdc;
@@ -197,7 +211,9 @@
   .nav__link {
     color: #000;
     margin-left: 20px;
-    padding: 23px 0; }
+    padding: 23px 0;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s; }
   .nav__link:hover {
     color: #00acdc; }
 

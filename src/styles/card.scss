@@ -79,13 +79,13 @@
     text-align: center;
     text-transform: uppercase;
     color: #fff;
-    transition: background 0.3s, color 0.3s, border 0.3s;
+    border: 1px solid transparent;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
   }
 
   &__button:hover {
+    border-color: $important-color;
     background: #fff;
-    border: 1px solid $important-color;
-    box-sizing: border-box;
     color: $color-link-active;
   }
 }

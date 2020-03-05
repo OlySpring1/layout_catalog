@@ -24,10 +24,18 @@
   box-sizing: border-box;
   border-radius: 5px;
 
-  .card__img {
+  &__img {
     width: 160px;
     height: 134px;
-    margin: 16px auto 45px;
+    margin: 5px auto 20px;
+    padding: 25px 0;
+    border: 3px solid transparent;
+    transition: transform 1s;
+  }
+
+  &__img:hover {
+    border-color: #f3f3f3;
+    transform: scale(1.2);
   }
 
   &__text {
@@ -71,6 +79,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #fff;
+    transition: background 0.3s, color 0.3s, border 0.3s;
   }
 
   &__button:hover {

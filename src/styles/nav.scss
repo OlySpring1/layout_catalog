@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixin";
+
 .nav {
   @include primeryFont;
   text-transform: uppercase;
@@ -15,7 +18,7 @@
     color: #000;
     margin-left: 20px;
     padding: 23px 0;
-
+    transition: color 0.3s;
   }
 
   &__link:hover {

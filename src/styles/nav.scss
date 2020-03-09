@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixin";
+
+.nav {
+  @include primeryFont;
+  text-transform: uppercase;
+  height: 60px;
+
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__link {
+    display: inline-block;
+    line-height: 60px;
+    height: 60px;
+    color: #000;
+    margin-left: 20px;
+    transition: color 0.3s;
+  }
+
+  &__link:hover {
+    color: #00acdc;
+  }
+}
+
+.is-active {
+  position: relative;
+  color: $color-link-active;
+  margin-left: 0;
+}
+
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 56px;
+  height: 4px;
+  width: 100%;
+  background-color: $important-color;
+  border-radius: 2px;
+}

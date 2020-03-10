@@ -2,14 +2,14 @@
 @import "mixin";
 
 .container {
-  max-width: calc(#{$widthCard} * 4 + 3 * #{$gap});
   margin: 50px auto;
 }
 
 .catalog-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-gap: 51px 48px;
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
 }
 
 .card {
@@ -17,17 +17,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 51px;
   padding: 14px;
   background: #fff;
   border: 1px solid #f3f3f3;
   box-sizing: border-box;
   border-radius: 5px;
 
-  .card__img {
+  &__img {
     width: 160px;
     height: 134px;
-    margin: 16px auto 45px;
+    margin: 0 auto 20px;
+    padding: 13px 0 22px;
+    border: 3px solid transparent;
+    transition: transform 1s;
+  }
+
+  &__img:hover {
+    border-color: #f3f3f3;
+    transform: scale(1.2);
   }
 
   &__text {
@@ -53,7 +60,7 @@
 
     .cost {
       font-style: normal;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 16px;
       line-height: 19px;
     }
@@ -65,18 +72,19 @@
     background-color: $important-color;
     border-radius: 5px;
     box-sizing: border-box;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 14px;
-    line-height: 40px;
+    line-height: 38px;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
+    border: 1px solid transparent;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
   }
 
   &__button:hover {
+    border-color: $important-color;
     background: #fff;
-    border: 1px solid $important-color;
-    box-sizing: border-box;
     color: $color-link-active;
   }
 }
